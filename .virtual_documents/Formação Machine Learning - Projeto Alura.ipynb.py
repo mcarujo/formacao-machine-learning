@@ -150,14 +150,11 @@ if correlacoes.shape get_ipython().getoutput("= (10, 10):")
 correlacao_com_nota_total = correlacoes.corr()
 
 
-print(correlacao_com_nota_total)
-
-
 # solução gráfico
-def plota_correlacao(dados):
+def plota_correlacao(serie):
     sns.set(style="white")
     plt.figure(figsize=(12, 6))
-    corr = dados.corr()["nota_total"].sort_values()
+    corr = serie["nota_total"].sort_values()
     sns.barplot(y=corr.index, x=corr.values)
 
 
